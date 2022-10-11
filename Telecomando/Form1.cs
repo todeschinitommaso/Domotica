@@ -40,5 +40,41 @@ namespace Telecomando
                 t.spegni();
             }
         }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            int vol = Convert.ToInt32(numericUpDown2.Value);
+            if (power.Text == "OFF")
+                t.setVolume(vol);
+
+            else
+                MessageBox.Show("TV spenta");
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            int chn = Convert.ToInt32(numericUpDown1.Value);
+            if (power.Text == "OFF")
+                t.setVolume(chn);
+
+            else
+                MessageBox.Show("TV spenta");
+        }
+
+        private void infrarossi_CheckedChanged(object sender, EventArgs e)
+        {
+            t.setSegnale(t.infrarossi, t.bluetooth, t.WiFi);
+        }
+
+        private void bluetooth_CheckedChanged(object sender, EventArgs e)
+        {
+            t.setSegnale(t.bluetooth, t.infrarossi, t.WiFi);
+        }
+
+        private void wifi_CheckedChanged(object sender, EventArgs e)
+        {
+            t.setSegnale(t.WiFi, t.infrarossi, t.bluetooth);
+            
+        }
     }
 }

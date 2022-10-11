@@ -10,19 +10,42 @@ namespace Telecomando
     {
         public bool stato;
 
-        public bool volume;
+        public int volume;
+
+        public int canale;
 
         public string produttore;
 
         public string modello;
 
-        public class Segnale
+        public bool infrarossi;
+
+        public bool bluetooth;
+
+        public bool WiFi;
+
+        public bool setSegnale(bool nuovoSegnale, bool a, bool b)
         {
-            bool infrarossi;
+            nuovoSegnale = true;
+            return nuovoSegnale;
 
-            bool bluetooth;
+            a = false;
+            return a;
 
-            bool WiFi;
+            b = false;
+            return b;
+        }
+
+        public int setCanale(int nuovoCanale)
+        {
+            canale = nuovoCanale;
+            return canale;
+        }
+
+        public int setVolume(int nuovoVolume)
+        {
+            volume = nuovoVolume;
+            return volume;
         }
 
         public void accendi()

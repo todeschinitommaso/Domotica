@@ -33,9 +33,9 @@
             this.power = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.infrarossi = new System.Windows.Forms.RadioButton();
+            this.bluetooth = new System.Windows.Forms.RadioButton();
+            this.wifi = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +46,7 @@
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(43, 20);
             this.numericUpDown2.TabIndex = 1;
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // numericUpDown1
             // 
@@ -53,6 +54,7 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(43, 20);
             this.numericUpDown1.TabIndex = 2;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // power
             // 
@@ -83,47 +85,50 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "canale";
             // 
-            // radioButton1
+            // infrarossi
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 50);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(67, 17);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Infrarossi";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.infrarossi.AutoSize = true;
+            this.infrarossi.Location = new System.Drawing.Point(12, 50);
+            this.infrarossi.Name = "infrarossi";
+            this.infrarossi.Size = new System.Drawing.Size(67, 17);
+            this.infrarossi.TabIndex = 6;
+            this.infrarossi.TabStop = true;
+            this.infrarossi.Text = "Infrarossi";
+            this.infrarossi.UseVisualStyleBackColor = true;
+            this.infrarossi.CheckedChanged += new System.EventHandler(this.infrarossi_CheckedChanged);
             // 
-            // radioButton2
+            // bluetooth
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(85, 50);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(74, 17);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "BlueTooth";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.bluetooth.AutoSize = true;
+            this.bluetooth.Location = new System.Drawing.Point(85, 50);
+            this.bluetooth.Name = "bluetooth";
+            this.bluetooth.Size = new System.Drawing.Size(74, 17);
+            this.bluetooth.TabIndex = 7;
+            this.bluetooth.TabStop = true;
+            this.bluetooth.Text = "BlueTooth";
+            this.bluetooth.UseVisualStyleBackColor = true;
+            this.bluetooth.CheckedChanged += new System.EventHandler(this.bluetooth_CheckedChanged);
             // 
-            // radioButton3
+            // wifi
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(160, 50);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(46, 17);
-            this.radioButton3.TabIndex = 8;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "WiFi";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.wifi.AutoSize = true;
+            this.wifi.Location = new System.Drawing.Point(160, 50);
+            this.wifi.Name = "wifi";
+            this.wifi.Size = new System.Drawing.Size(46, 17);
+            this.wifi.TabIndex = 8;
+            this.wifi.TabStop = true;
+            this.wifi.Text = "WiFi";
+            this.wifi.UseVisualStyleBackColor = true;
+            this.wifi.CheckedChanged += new System.EventHandler(this.wifi_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(217, 300);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.wifi);
+            this.Controls.Add(this.bluetooth);
+            this.Controls.Add(this.infrarossi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.power);
@@ -146,9 +151,9 @@
         private System.Windows.Forms.Button power;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton infrarossi;
+        private System.Windows.Forms.RadioButton bluetooth;
+        private System.Windows.Forms.RadioButton wifi;
     }
 }
 
